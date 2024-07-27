@@ -1,0 +1,19 @@
+#connect {
+    background-color:thistle;
+}
+
+#login {
+    border: 2rem ridge green;
+    display: flex;
+    justify-content: center;
+}
+
+#fashion {
+    width: 150px;
+    height: 200px;
+}
+
+#fabric {
+    display: flex;
+    justify-content: center;
+}

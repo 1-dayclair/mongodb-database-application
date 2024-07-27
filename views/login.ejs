@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login!</title>
-</head>
-<body>
 
-    <form action = "/enhanced" method = "post">
-        <input type = "text" name = "username" placeholder = "Username">
-        <input type = "text" name = "password" placeholder = "Password">
-        <button type = "submit">Submit</button>
-    </form>
+    <link rel = "stylesheet" href = "../public/login-styles.css">
+
+</head>
+<body id = "connect">
+
+    <div id = "imBad">
+
+        <form id = "login" action = "/enhanced" method = "post">
+            <input type = "text" name = "username" placeholder = "Username">
+            <input type = "password" name = "password" placeholder = "Password">
+            <button type = "submit">Submit</button>
+        </form>
+
+    </div>
+
+    <div id = "fabric">
+        <img id = "fashion" src = "../public/media/fabric.gif" alt = "An image of a fabric flowing on the world wide web">
+    </div>
     
 </body>
 </html>
