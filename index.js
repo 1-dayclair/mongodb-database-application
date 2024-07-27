@@ -28,12 +28,26 @@ const commentModel = require("./model/comment");
 
 const user = require("./routes/user");
 app.use("/user", user);
+// Routes ^^
+
+app.set("view engine", "ejs"); 
+
+app.use("/public", express.static("./public"));
+app.use("/public/media", express.static("./public")); 
 
 // Welcome
-app.get("/", (req,res) => {
-    res.send("Welcome to (In a Vaccum)");
+app.get("/", (req, res) => {
+    res.render("index.ejs", { text: "Welcome to (In a Vaccum!)" });
+    console.log("Welcome to (In a Vaccum!)");
 });
 // Welcome^^
+
+// Login
+app.get("/login", (req, res) => {
+  res.render("login.ejs", { text: "Login: (In a Vaccum!)"});
+  console.log("Login: (In a Vaccum!)"); 
+});
+// Login^^
 
 
 // Error Handling
