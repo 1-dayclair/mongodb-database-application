@@ -2,6 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 require('dotenv').config();
 
+// Router
+const router = require("./routes/user")
+// Router^^
 
 // Connection
 main().catch(err => console.log(err));
@@ -28,6 +31,9 @@ const commentModel = require("./model/comment");
 
 const user = require("./routes/user");
 app.use("/user", user);
+
+const person = require("./routes/person");
+app.use("/people", person);
 // Routes ^^
 
 app.set("view engine", "ejs"); 
@@ -36,7 +42,7 @@ app.use("/public", express.static("./public"));
 app.use("/public/media", express.static("./public")); 
 
 // Welcome
-app.get("/", (req, res) => {
+app.get("/begin", (req, res) => {
     res.render("index.ejs", { text: "Welcome to (In a Vaccum!)" });
     console.log("Welcome to (In a Vaccum!)");
 });
