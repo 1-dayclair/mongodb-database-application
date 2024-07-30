@@ -34,6 +34,9 @@ app.use("/user", user);
 
 const person = require("./routes/person");
 app.use("/people", person);
+
+const comment = require("./routes/comment");
+app.use("/comment", comment)
 // Routes ^^
 
 app.set("view engine", "ejs"); 
