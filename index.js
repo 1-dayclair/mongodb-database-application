@@ -45,7 +45,7 @@ app.use("/public", express.static("./public"));
 app.use("/public/media", express.static("./public")); 
 
 // Welcome
-app.get("/begin", (req, res) => {
+app.get("/", (req, res) => {
     res.render("index.ejs", { text: "Welcome to (In a Vaccum!)" });
     console.log("Welcome to (In a Vaccum!)");
 });
